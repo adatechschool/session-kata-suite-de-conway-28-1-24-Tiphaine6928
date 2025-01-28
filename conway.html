@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suite de Conway</title>
+</head>
+<body>
+    <script>
+
+        // J'ai choisi de coder en javascript
+
+        function decoupeChaine(str) {
+            const result = str.match(/(.)\1*|./g).join(" ");
+            return result;
+        }
+
+        console.log(decoupeChaine("ab"));     
+        console.log(decoupeChaine("aabbca"));
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
