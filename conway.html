@@ -16,8 +16,25 @@
             return result;
         }
 
+        function decritChaine(str2) {
+            let result2 = "";
+            let compteur = 1;
+
+            for (let i = 0; i < str2.length; i++) {
+                if (str2[i] === str2[i + 1]) {
+                    compteur++; // On incrémente si le caractère suivant est identique
+                } else {
+                    result2 += compteur + str2[i]; // On ajoute le compteur et le caractère
+                    compteur = 1; // On réinitialise le compteur
+                }
+            }
+
+            return result2;
+        }
+
         console.log(decoupeChaine("ab"));     
         console.log(decoupeChaine("aabbca"));
+        console.log(decritChaine("aaabggr"));
 
     </script>
 </body>
