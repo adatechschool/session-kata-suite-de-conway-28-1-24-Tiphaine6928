@@ -22,19 +22,32 @@
 
             for (let i = 0; i < str2.length; i++) {
                 if (str2[i] === str2[i + 1]) {
-                    compteur++; // On incrémente si le caractère suivant est identique
+                    compteur++;
                 } else {
-                    result2 += compteur + str2[i]; // On ajoute le compteur et le caractère
-                    compteur = 1; // On réinitialise le compteur
+                    result2 += compteur + str2[i];
+                    compteur = 1;
                 }
             }
 
             return result2;
         }
 
+        function suiteConway(n, carac) {
+            let termes = [carac];
+
+            for (let i = 1; i < n; i++) {
+                const precedent = termes[i - 1];
+                const nouveau = decritChaine(precedent);
+                termes.push(nouveau);
+            }
+
+        return termes;
+        }
+
         console.log(decoupeChaine("ab"));     
         console.log(decoupeChaine("aabbca"));
         console.log(decritChaine("aaabggr"));
+        console.log(suiteConway(3, "5"));
 
     </script>
 </body>
